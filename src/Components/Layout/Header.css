@@ -1,0 +1,45 @@
+.header {
+  background-image: url("../../assets/images/bg-desktop-dark.jpg");
+  height: 18.5rem;
+  background-size: cover;
+  transition: ease all 1s;
+}
+body:has(.light) .header {
+  transition: ease all 1s;
+  background-image: url("../../assets/images/bg-desktop-light.jpg");
+}
+.header-content {
+  width: 36rem;
+  max-width: 85%;
+  display: flex;
+  justify-content: space-between;
+  margin: 0 auto;
+  position: relative;
+  top: 5rem;
+}
+.header-content h1 {
+  font-size: 2.5rem;
+  color: hsl(0, 0%, 98%);
+  font-weight: bold;
+  letter-spacing: 1rem;
+}
+svg {
+  cursor: pointer;
+}
+@media screen and (max-width: 500px) {
+  .header {
+    background-image: url("../../assets/images/bg-mobile-dark.jpg");
+    height: 15rem;
+    background-size: cover;
+  }
+  body:has(.light) .header {
+    background-image: url("../../assets/images/bg-mobile-light.jpg");
+  }
+  .header-content {
+    top: 3.5rem;
+  }
+  .header-content h1 {
+    font-size: 1.8rem;
+    letter-spacing: 0.7rem;
+  }
+}

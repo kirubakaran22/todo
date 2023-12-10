@@ -1,0 +1,49 @@
+.todo-container {
+  width: 36rem;
+  max-width: 85%;
+  height: 22.5rem;
+  margin: -6.5rem auto;
+  padding: 0.3rem 0 0 0;
+  background-color: var(--component-background);
+  transition: ease all 1s;
+  border-radius: 0.4rem;
+  box-shadow: 2px 2px 20px rgba(0, 0, 0,.4);                     
+}
+.no-item{
+  font-size: 1.5rem;
+  text-align: center;
+  margin-top: 5rem;
+  color: var(--component-text);
+}
+::-webkit-scrollbar {
+  width: 0.35rem;
+  border-radius: 10px;
+}
+::-webkit-scrollbar-track {
+  background-color: hsl(235, 21%, 21%);
+}
+::-webkit-scrollbar-thumb {
+  background-color: hsl(237, 13%, 36%);
+  border-radius: 10px;
+}
+body:has(.light) ::-webkit-scrollbar-track {
+  background-color: hsl(236, 23%, 86%);
+}
+body:has(.light) ::-webkit-scrollbar-thumb {
+  background-color: hsl(236, 16%, 59%);
+  border-radius: 10px;
+}
+.todo-list {
+  height: 85%;
+  width: 100%;
+  overflow: auto;
+}
+@media screen and (max-width: 500px) {
+  .todo-container {
+    height: 21rem;
+    margin: -5.8rem auto;
+  }
+  ::-webkit-scrollbar {
+    width: 0.2rem;
+  }
+}

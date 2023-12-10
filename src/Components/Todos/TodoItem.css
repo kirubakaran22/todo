@@ -1,0 +1,57 @@
+.todo-item {
+  width: 100%;
+  height: calc(100% / 5);
+  border-bottom: 1px solid var(--border-bottom);
+  display: flex;
+  align-items: center;
+  gap: 1.4rem;
+  padding: 1.1rem 1.4rem;
+}
+.todo-item .circle {
+  width: 1.6rem;
+  height: 1.6rem;
+  border: 2px solid var(--circle);
+  border-radius: 50%;
+  cursor: pointer;
+}
+.todo-item .circle.complete {
+  background: linear-gradient(hsl(192, 100%, 67%), hsl(280, 87%, 65%));
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.todo-item .circle:hover {
+  border: 1px solid var(--component-text);
+}
+.todo-item .todo-content {
+  flex: 1;
+  color: var(--component-text);
+  overflow: auto;
+}
+.light .todo-item .todo-content{
+  font-weight: bold;
+}
+
+.todo-item .todo-content.complete {
+  color: var(--stike);
+  text-decoration: line-through;
+}
+.todo-item .cross {
+  display: none;
+}
+.todo-item:hover .cross {
+  display: block;
+}
+
+@media screen and (max-width: 500px) {
+  .todo-item .circle {
+    width: 1.4rem;
+    height: 1.4rem;
+  }
+  .todo-item .todo-content {
+    font-size: 0.9rem;
+  }
+  .todo-item .cross {
+    display: block;
+  }
+}

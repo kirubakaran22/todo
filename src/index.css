@@ -1,0 +1,34 @@
+@font-face {
+  font-family: JosefinSans;
+  src: url("./assets/fonts/JosefinSans-Light.ttf");
+}
+
+:root {
+  --component-background: hsl(235, 24%, 19%);
+  --component-text: hsl(0, 0%, 98%);
+  --circle: hsl(237, 14%, 26%);
+  --stike: hsl(234, 11%, 52%);
+  --border-bottom: hsl(233, 14%, 35%);
+}
+.light {
+  --component-background: hsl(0, 0%, 98%);
+  --component-text: hsl(235, 21%, 11%);
+  --circle: hsl(236, 33%, 92%);
+  --stike: hsl(236, 9%, 61%);
+  --border-bottom: hsl(233, 11%, 84%);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: JosefinSans;
+  background-color: hsl(235, 21%, 11%);
+  transition: ease all 1s;
+}
+body:has(.light) {
+  background-color: hsl(0, 0%, 98%);
+}

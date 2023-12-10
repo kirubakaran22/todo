@@ -1,0 +1,61 @@
+.form {
+  position: relative;
+  top: -8rem;
+  width: 36rem;
+  max-width: 85%;
+  height: 3.6rem;
+  margin: 0 auto;
+  padding: 1.1rem 1.4rem;
+  display: flex;
+  align-items: center;
+  gap: 1.4rem;
+  background-color: var(--component-background);
+  border-radius: 0.4rem;
+  box-shadow: 2px 2px 20px rgba(0, 0, 0,.4);
+  transition: ease all 1s;
+}
+.form .circle {
+  width: 1.6rem;
+  height: 1.6rem;
+  border: 2px solid var(--circle);
+  border-radius: 50%;
+  cursor: pointer;
+}
+.form .circle.complete {
+  background: linear-gradient(hsl(192, 100%, 67%), hsl(280, 87%, 65%));
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.form .circle:hover {
+  border: 1px solid var(--component-text);
+}
+
+.form input {
+  flex: 1;
+  font: inherit;
+  font-size: 1.15rem;
+  color: var(--component-text);
+  width: 100%;
+  outline: none;
+  background-color: transparent;
+  border: none;
+}
+.light .form input {
+  font-weight: bold;
+}
+
+@media screen and (max-width: 500px) {
+  .form {
+    top: -7rem;
+    height: 3.1rem;
+    gap: 1.1rem;
+  }
+  .form input {
+    font-size: 1rem;
+  }
+  .form .circle {
+    width: 1.4rem;
+    height: 1.4rem;
+  }
+}
